@@ -28,7 +28,7 @@ namespace Accel
             await mpu.Init();
         }
 
-        private void MpuSensorInterruptEvent(object sender, MpuSensorEventArgs e)
+        void MpuSensorInterruptEvent(object sender, MpuSensorEventArgs e)
         {
             Debug.WriteLine(e.ToString());
         }
