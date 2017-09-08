@@ -50,8 +50,6 @@ namespace IoTDevicesShared
 
         public async Task<string> SendDeviceToCloudSensorDataAsync(SensorData sensorData)
         {
-
-
             var telemetryDataPoint = new
             {
                 messageId = messageId++,

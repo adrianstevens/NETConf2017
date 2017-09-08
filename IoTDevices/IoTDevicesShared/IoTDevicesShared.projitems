@@ -10,6 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)DeviceToCloud.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\SensorValues.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SensorData.cs" />
   </ItemGroup>
 </Project>

@@ -41,11 +41,16 @@ namespace ConsoleMessageMonitor
         static async Task ReceiveMessagesFromDeviceAsync(string partition, CancellationToken ct)
         {
             var eventHubReceiver = eventHubClient.GetDefaultConsumerGroup().CreateReceiver(partition, DateTime.UtcNow);
+
             while (true)
             {
-                if (ct.IsCancellationRequested) break;
+                if (ct.IsCancellationRequested)
+                    break;
+
                 EventData eventData = await eventHubReceiver.ReceiveAsync();
-                if (eventData == null) continue;
+
+                if (eventData == null)
+                    continue;
 
                 string data = Encoding.UTF8.GetString(eventData.GetBytes());
                 Console.WriteLine("Message received. Partition: {0} Data: '{1}'", partition, data);
