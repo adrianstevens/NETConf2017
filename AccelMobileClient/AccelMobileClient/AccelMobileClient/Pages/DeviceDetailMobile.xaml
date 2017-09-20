@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccelClient.DeviceDetailMobile"
+             xmlns:charts="clr-namespace:Microcharts;assembly=Microcharts.Forms"
+             xmlns:chartsforms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="Field Device">
+    <ScrollView>
+        <StackLayout Padding="10">
+
+            <Image x:Name="imageDevice" WidthRequest="150" />
+            <Label Text="{Binding Name, StringFormat='Name: {0}'}" />
+            <Label Text="{Binding TypeOfDevice, StringFormat='Device type: {0}'}" />
+            <Label Text="{Binding FirstSeen, StringFormat='First seen: {0}'}" />
+            <Label Text="{Binding LastSeen, StringFormat='Last seen: {0}'}" />
+            <Label Text="{Binding AvgAcceleration, StringFormat='Avg Acceleration: {0}'}" />
+            <Label Text="Acceleration data (m/s²)" FontAttributes="Bold" />
+
+            <Grid Padding="5" BackgroundColor="#EEEEEE" >
+                <chartsforms:ChartView HeightRequest="250" x:Name="chartView" />
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

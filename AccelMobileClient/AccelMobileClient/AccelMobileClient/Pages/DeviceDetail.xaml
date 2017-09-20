@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccelClient.DeviceDetail"
+             xmlns:charts="clr-namespace:Microcharts;assembly=Microcharts.Forms"
+             xmlns:chartsforms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="Field Device">
+    <Grid Padding="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackLayout>
+            <Image x:Name="imageDevice" WidthRequest="200" />
+            <Label Text="Acceleration data (m/s²)" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" />
+        </StackLayout>
+        
+        <ListView x:Name="listAcceleration" ItemsSource="{Binding Data}" 
+                  Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5">
+                            <Label Text="{Binding Acceleration, StringFormat='{0}'}" />
+                            <Label Text="{Binding Timestamp, StringFormat='Received: {0}'}" Grid.Row="1" TextColor="DarkGray"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Grid.Column="1">
+            <Label Text="{Binding Name, StringFormat='Name: {0}'}" />
+            <Label Text="{Binding TypeOfDevice, StringFormat='Device type: {0}'}" />
+            <Label Text="{Binding FirstSeen, StringFormat='First seen: {0}'}" />
+            <Label Text="{Binding LastSeen, StringFormat='Last seen: {0}'}" />
+        </StackLayout>
+
+            <Grid Padding="5" BackgroundColor="#EEEEEE" 
+                  Grid.Row="1" Grid.Column="1">
+            <chartsforms:ChartView HeightRequest="300" x:Name="chartView" />
+        </Grid>
+
+    </Grid>
+</ContentPage>
