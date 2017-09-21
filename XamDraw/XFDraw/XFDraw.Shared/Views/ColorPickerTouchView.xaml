@@ -3,5 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:src="clr-namespace:XFDraw.Views"
              x:Class="XFDraw.Views.ColorPickerTouchView">
-    <StackLayout x:Name="mainStack" Spacing="10" Padding="10" Orientation="Horizontal" />
+    <StackLayout x:Name="mainStack" 
+                 Spacing="10" Padding="10" 
+                 Orientation="Horizontal" />
 </src:ColorPicker>

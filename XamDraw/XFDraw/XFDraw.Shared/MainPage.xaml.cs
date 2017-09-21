@@ -2,6 +2,12 @@
 using Xamarin.Forms;
 using XFDraw.Views;
 
+#if __ANDROID__
+using Android.Widget;
+using Xamarin.Forms.Platform.Android;
+using Android.Support.Design.Widget;
+#endif
+
 namespace XFDraw
 {
     public partial class MainPage : ContentPage
@@ -54,6 +60,24 @@ namespace XFDraw
 
         void AddToolbarItems ()
         {
+#if __ANDROID__
+            var actionButton = new FloatingActionButton(Forms.Context);
+
+            actionButton.SetImageResource(XFDraw.Droid.Resource.Drawable.trash);
+            actionButton.Click += (s, e) => OnClearClicked();
+
+            var actionButtonFrame = new FrameLayout(Forms.Context);
+            actionButtonFrame.SetClipToPadding(false);
+            actionButtonFrame.SetPadding(0, 0, 50, 50);
+            actionButtonFrame.AddView(actionButton);
+
+            var actionButtonFrameView = actionButtonFrame.ToView();
+            actionButtonFrameView.HorizontalOptions = LayoutOptions.End;
+            actionButtonFrameView.VerticalOptions = LayoutOptions.End;
+
+
+            mainLayout.Children.Add(actionButtonFrameView, 0, 1);
+#else
             clearCommand = new Command(OnClearClicked, () => { return IsCanvasDirty; });
 
             var trash = new ToolbarItem()
@@ -64,6 +88,7 @@ namespace XFDraw
             };
 
             ToolbarItems.Add(trash);
+#endif
         }
 
         void OnSketchUpdated(object sender, EventArgs e)

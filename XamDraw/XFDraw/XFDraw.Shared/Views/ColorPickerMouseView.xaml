@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:src="clr-namespace:XFDraw.Views"
              x:Class="XFDraw.Views.ColorPickerMouseView">
-    <Grid Padding="6" BackgroundColor="#F0F0F0">
-    </Grid>
+    <Grid Padding="6" BackgroundColor="#F0F0F0" />
+
 </src:ColorPicker>
