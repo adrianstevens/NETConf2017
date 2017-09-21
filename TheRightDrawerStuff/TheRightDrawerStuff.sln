@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRightDrawerStuff", "TheRightDrawerStuff\TheRightDrawerStuff.csproj", "{E32D4668-AA52-4DB6-AA26-E6B758E661B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRightDrawerStuff.XF", "TheRightDrawerStuff.XF\TheRightDrawerStuff.XF.csproj", "{C28FBBD3-F03C-41F5-B624-0AA776998829}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E32D4668-AA52-4DB6-AA26-E6B758E661B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32D4668-AA52-4DB6-AA26-E6B758E661B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32D4668-AA52-4DB6-AA26-E6B758E661B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32D4668-AA52-4DB6-AA26-E6B758E661B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28FBBD3-F03C-41F5-B624-0AA776998829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28FBBD3-F03C-41F5-B624-0AA776998829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28FBBD3-F03C-41F5-B624-0AA776998829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28FBBD3-F03C-41F5-B624-0AA776998829}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

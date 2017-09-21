@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.100-embeddingpreview" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RealTimePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoricalPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="RealTimePage.xaml.cs">
+      <DependentUpon>RealTimePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="HistoricalPage.xaml.cs">
+      <DependentUpon>HistoricalPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
