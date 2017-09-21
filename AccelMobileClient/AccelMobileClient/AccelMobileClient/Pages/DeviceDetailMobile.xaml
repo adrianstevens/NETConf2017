@@ -5,6 +5,11 @@
              xmlns:charts="clr-namespace:Microcharts;assembly=Microcharts.Forms"
              xmlns:chartsforms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              Title="Field Device">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Real Time" x:Name="realTime" />
+    </ContentPage.ToolbarItems>
+    
     <ScrollView>
         <StackLayout Padding="10">
 

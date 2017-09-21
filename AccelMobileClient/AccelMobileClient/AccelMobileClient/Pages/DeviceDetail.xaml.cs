@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using SkiaSharp;
 using Microcharts;
 using System.Collections.Generic;
+using AccelMobileClient.Pages;
 
 namespace AccelClient
 {
@@ -19,6 +20,13 @@ namespace AccelClient
             BindingContext = viewModel;
 
             imageDevice.Source = ImageSource.FromResource($"AccelMobileClient.Images.{viewModel.TypeOfDevice}.png");
+
+            realTime.Clicked += RealTime_Clicked;
+        }
+
+        private void RealTime_Clicked(object sender, System.EventArgs e)
+        {
+              Navigation.PushModalAsync (new RealTime(), true);
         }
 
         void AddChartData()

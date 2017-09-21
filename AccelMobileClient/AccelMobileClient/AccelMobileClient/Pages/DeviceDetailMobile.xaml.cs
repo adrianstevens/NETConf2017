@@ -21,6 +21,7 @@ namespace AccelClient
             imageDevice.Source = ImageSource.FromResource($"AccelMobileClient.Images.{viewModel.TypeOfDevice}.png");
 
             SizeChanged += DeviceDetailSizeChanged;
+            
         }
 
         void DeviceDetailSizeChanged(object sender, System.EventArgs e)

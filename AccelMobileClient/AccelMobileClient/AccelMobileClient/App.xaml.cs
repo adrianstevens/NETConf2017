@@ -1,10 +1,14 @@
 ﻿using AccelClient;
+using AccelerationAndGyro;
+using System;
 using Xamarin.Forms;
 
 namespace AccelMobileClient
 {
     public partial class App : Application
     {
+        public static Func<IAccelerationAndGyroSensor> GetGyroSensor { get; set; } = CommonSensorConfig.GetFakeSensor;
+
         public App()
         {
             InitializeComponent();
