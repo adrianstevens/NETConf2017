@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SayHelloXF"
+             x:Class="SayHelloXF.MainPage">
+
+    <StackLayout Padding="20" Spacing="10" x:Name="stackMain">
+        <StackLayout Spacing="10">
+            <Label Text="Enter a message below and press the Speak button to activate text-to-speech." />
+            <Entry x:Name="entryMessage" />
+            <Button x:Name="buttonSpeak" Text="Speak" />
+        </StackLayout>
+        <Image x:Name="imageIcon" WidthRequest="300" HorizontalOptions="Center" />
+    </StackLayout>
+
+</ContentPage>
