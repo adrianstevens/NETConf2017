@@ -9,7 +9,7 @@ namespace UWPDevice
     {
         static string deviceId = "{TODO}";
         static string deviceKey = "{TODO}";
-        static string iotHubUri = "{TODO}";
+        static string hostName = "{TODO}";
 
         public MainPage()
         {
@@ -20,7 +20,7 @@ namespace UWPDevice
 
         async void SendMessages()
         {
-            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, iotHubUri);
+            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, hostName);
 
             while (true)
             {

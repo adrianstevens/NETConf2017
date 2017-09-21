@@ -7,9 +7,9 @@ namespace ConsoleDevice
 {
     class Program
     {
-        static string deviceId = "{TODO}";
-        static string deviceKey = "{TODO}";
-        static string iotHubUri = "{TODO}";
+        static string deviceId = "ConsoleDevice";
+        static string deviceKey = "ySMBr4sd/9JPZ0N3i8LEojCL+CGRMJSk/4OfGjSd76E=";
+        static string hostName = "Accel.azure-devices.net";
 
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace ConsoleDevice
 
         static async void SendMessages()
         {
-            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, iotHubUri);
+            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, hostName);
 
             while (true)
             {

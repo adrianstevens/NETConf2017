@@ -16,7 +16,7 @@ namespace AndroidDevice
     {
         static string deviceId = "{TODO}";
         static string deviceKey = "{TODO}";
-        static string iotHubUri = "{TODO}";
+        static string hostName = "{TODO}";
 
         SensorManager sensorManager;
         Sensor accelSensor;
@@ -48,7 +48,7 @@ namespace AndroidDevice
 
         async void SendMessages()
         {
-            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, iotHubUri);
+            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, hostName);
 
             while (true)
             {

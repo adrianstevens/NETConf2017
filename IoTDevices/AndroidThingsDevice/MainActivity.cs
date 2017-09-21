@@ -12,7 +12,7 @@ namespace AndroidThingsDevice
     {
         static string deviceId = "{TODO}";
         static string deviceKey = "{TODO}";
-        static string iotHubUri = "{TODO}";
+        static string hostName = "{TODO}";
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -23,7 +23,7 @@ namespace AndroidThingsDevice
 
         async void SendMessages()
         {
-            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, iotHubUri);
+            var deviceToCloud = new DeviceToCloud(deviceId, deviceKey, hostName);
 
             while (true)
             {
