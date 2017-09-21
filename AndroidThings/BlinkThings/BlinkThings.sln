@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlinkThings", "BlinkThings\BlinkThings.csproj", "{A38B6FD1-5129-48F1-9ABF-EA5188830244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccelThings", "AccelThings\AccelThings.csproj", "{364757DC-126D-4D62-9716-DC6FEA2D0FD3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +17,6 @@ Global
 		{A38B6FD1-5129-48F1-9ABF-EA5188830244}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A38B6FD1-5129-48F1-9ABF-EA5188830244}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A38B6FD1-5129-48F1-9ABF-EA5188830244}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{364757DC-126D-4D62-9716-DC6FEA2D0FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{364757DC-126D-4D62-9716-DC6FEA2D0FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{364757DC-126D-4D62-9716-DC6FEA2D0FD3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{364757DC-126D-4D62-9716-DC6FEA2D0FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{364757DC-126D-4D62-9716-DC6FEA2D0FD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{364757DC-126D-4D62-9716-DC6FEA2D0FD3}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
