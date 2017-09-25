@@ -3,22 +3,22 @@ Here you're find the Xamarin Universuty Samples that were used for .NET Conf 201
 
 .NET Conf Videos are available on Channel9: https://channel9.msdn.com/Events/dotnetConf/2017
 
-##Xamarin University presented six (6) sessions at .NET Conf 2017
+## Xamarin University presented six (6) sessions at .NET Conf 2017
 
-1. DevOps with Visual Studio Team Services and Mobile Center
+### DevOps with Visual Studio Team Services and Mobile Center
 https://channel9.msdn.com/Events/dotnetConf/2017/T323
 
-2. Introduction to Xamarin.Forms
+### Introduction to Xamarin.Forms
 https://channel9.msdn.com/Events/dotnetConf/2017/T325 
 
-3. What's New in Xamarin.Forms
+### What's New in Xamarin.Forms
 https://channel9.msdn.com/Events/dotnetConf/2017/T326
 
-4. Resonsive UI with Xamarin.Forms
+### Resonsive UI with Xamarin.Forms
 https://channel9.msdn.com/Events/dotnetConf/2017/T327
 
-5. Introduction to IoT with Xamarin
+### Introduction to IoT with Xamarin
 https://channel9.msdn.com/Events/dotnetConf/2017/T328
 
-6. Edge to Mobile with Azure
+### Edge to Mobile with Azure
 https://channel9.msdn.com/Events/dotnetConf/2017/T329
