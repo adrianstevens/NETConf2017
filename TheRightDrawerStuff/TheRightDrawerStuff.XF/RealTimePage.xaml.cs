@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -24,8 +23,6 @@ namespace TheRightDrawerStuff.XF
             await theBox.RotateXTo(-45, 750);
             await theBox.RotateTo(45, 750);
             await theBox.RotateTo(-45, 750);
-
         }
-
     }
 }

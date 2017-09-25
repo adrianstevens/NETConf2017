@@ -1,7 +1,6 @@
 ﻿using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -43,7 +42,5 @@ namespace AccelerationAndGyro
 
             return deviceClient.SendEventAsync(message);
         }
-
     }
-
 }

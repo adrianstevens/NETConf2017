@@ -10,14 +10,12 @@ namespace TheRightDrawerStuff
     [Activity(Label = "TheRightDrawerStuff", MainLauncher = true, Icon = "@mipmap/icon", Theme="@style/Theme.AppCompat")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             Forms.Init(this, savedInstanceState);
-            // Set our view from the "main" layout resource
+
             SetContentView(Resource.Layout.Main);
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             base.SetActionBar(toolbar);
@@ -27,19 +25,6 @@ namespace TheRightDrawerStuff
 
             Navigate((new HistoricalPage()).CreateFragment(this));
         }   
-
-        //public override bool OnOptionsItemSelected(IMenuItem item)
-        //{
-        //    switch (item.ItemId)
-        //    {
-        //        case Android.Resource.Id.Home:
-        //            var drawerLayout = FindViewById<Android.Support.V4.Widget.DrawerLayout>(Resource.Id.drawerLayout);
-        //            drawerLayout.OpenDrawer(Android.Support.V4.View.GravityCompat.Start);
-        //            break;
-        //    }
-
-        //    return true;
-        //}
 
         void OnMenuItemSelected(object sender, Android.Support.Design.Widget.NavigationView.NavigationItemSelectedEventArgs e)
         {
@@ -63,4 +48,3 @@ namespace TheRightDrawerStuff
         }
     }
 }
-

@@ -17,7 +17,5 @@ namespace AccelMobileClient
             
             return sensor;
         }
-        
-
     }
 }

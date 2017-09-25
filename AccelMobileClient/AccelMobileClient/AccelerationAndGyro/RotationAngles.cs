@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccelerationAndGyro
 {
@@ -57,7 +52,6 @@ namespace AccelerationAndGyro
             }
 
             //pitch is rotation along the x axis
-
             if (!IsSignificantGravity(gravY, gravZ))
             {
                 Pitch += gyroX;
@@ -69,45 +63,35 @@ namespace AccelerationAndGyro
             }
 
 
-            //if (!IsSignificantGravity(gravX, gravY))
-            //{
-                Yaw += -1 * gyroZ;
-                Yaw = BoundAngle(Yaw);
-                
-            //}
-            //else
-            //{
-            //    Yaw = BoundAngle(AngleFromGravity(gravX, gravY) + 180);
-            //}
-            
+            Yaw += -1 * gyroZ;
+            Yaw = BoundAngle(Yaw);
         }
 
-        private double BoundAngle(double angle)
+        double BoundAngle(double angle)
         {
             var newAngle = angle % 360;
 
             if (newAngle < 0)
-            {
                 newAngle += 360;
-            }
+
             return newAngle;
         }
 
-        private double radiansToDegrees(double r)
+        double RadiansToDegrees(double r)
         {
             return r * (180 / Math.PI);
         }
 
-        private bool IsSignificantGravity(double gravA, double gravB)
+        bool IsSignificantGravity(double gravA, double gravB)
         {
             var totalGrav = Math.Abs(Math.Sqrt((gravA * gravA) + (gravB * gravB)));
 
             return 0.8d < totalGrav && totalGrav < 1.1d && Math.Abs(gravA) > 0.05 && Math.Abs(gravB) > 0.05;
         }
 
-        private double AngleFromGravity(double a, double b)
+        double AngleFromGravity(double a, double b)
         {
-            return radiansToDegrees(Math.Atan2(a, b));
+            return RadiansToDegrees(Math.Atan2(a, b));
         }
     }
 }

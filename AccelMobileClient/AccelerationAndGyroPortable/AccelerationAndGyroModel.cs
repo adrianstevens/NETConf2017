@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-
-namespace AccelerationAndGyro
+﻿namespace AccelerationAndGyro
 {
-    
     public class AccelerationAndGyroModel
     {
         public float SamplePeriod { get; set; }
@@ -17,5 +11,4 @@ namespace AccelerationAndGyro
         public float GyroY { get; set; }
         public float GyroZ { get; set; }
     }
-    
 }

@@ -16,7 +16,6 @@ namespace AccelerationAndGyro
         List<AccelerationAndGyroModel> data;
 
         int currentReading = 0;
-        
 
         public FakeAccelerometerAndGyro()
         {

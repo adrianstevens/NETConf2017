@@ -57,7 +57,6 @@ namespace AccelerationAndGyro
             }
 
             //pitch is rotation along the x axis
-
             if (!IsSignificantGravity(gravY, gravZ))
             {
                 Pitch += gyroX;
@@ -68,18 +67,8 @@ namespace AccelerationAndGyro
                 Pitch = BoundAngle(AngleFromGravity(gravY, gravZ));
             }
 
-            //Yaw is buggy so let's keep it simple
-            //if (!IsSignificantGravity(gravX, gravY))
-            //{
-                Yaw += -1 * gyroZ;
-                Yaw = BoundAngle(Yaw);
-                
-            //}
-            //else
-            //{
-            //    Yaw = BoundAngle(AngleFromGravity(gravX, gravY) + 180);
-            //}
-            
+            Yaw += -1 * gyroZ;
+            Yaw = BoundAngle(Yaw);
         }
 
         private double BoundAngle(double angle)
@@ -93,7 +82,7 @@ namespace AccelerationAndGyro
             return newAngle;
         }
 
-        private double radiansToDegrees(double r)
+        double RadiansToDegrees(double r)
         {
             return r * (180 / Math.PI);
         }
@@ -107,7 +96,7 @@ namespace AccelerationAndGyro
 
         private double AngleFromGravity(double a, double b)
         {
-            return radiansToDegrees(Math.Atan2(a, b));
+            return RadiansToDegrees(Math.Atan2(a, b));
         }
     }
 }

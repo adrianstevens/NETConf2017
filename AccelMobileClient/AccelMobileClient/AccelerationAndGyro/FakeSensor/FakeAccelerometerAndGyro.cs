@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 
 namespace AccelerationAndGyro
@@ -16,11 +15,9 @@ namespace AccelerationAndGyro
 
         int currentReading = 0;
         Timer timer;
-        
 
         public FakeAccelerometerAndGyro()
         {
-            
             var serializer = new JsonSerializer();
 
             using (var dataStream = typeof(FakeAccelerometerAndGyro).GetTypeInfo().Assembly.GetManifestResourceStream("AccelerationAndGyro.FakeSensor.SampleData.txt"))
@@ -30,10 +27,10 @@ namespace AccelerationAndGyro
                 data = serializer.Deserialize<List<AccelerationAndGyroModel>>(jsonTextReader);
             }
 
-            timer = new System.Threading.Timer(raiseEvent, null, TimeSpan.Zero, TimeSpan.FromSeconds(0.01));            
+            timer = new Timer(RaiseEvent, null, TimeSpan.Zero, TimeSpan.FromSeconds(0.01));            
         }
 
-        private void raiseEvent(object state)
+        void RaiseEvent(object state)
         {
             NewSensorReading?.Invoke(this, data[currentReading]);
             currentReading = ++currentReading % data.Count;

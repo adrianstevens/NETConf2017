@@ -28,7 +28,7 @@ namespace AccelerationAndGyro
             ListenForData(device);
         }
         
-        async Task ListenForData(string device)
+        async void ListenForData(string device)
         {
             proxy.On<string>("deviceData", deviceDataJson =>
             {
@@ -39,10 +39,9 @@ namespace AccelerationAndGyro
             await proxy.Invoke("ListenDevice", device);
         }
 
-        private AccelerationAndGyroModel createModel(string s)
+        AccelerationAndGyroModel createModel(string s)
         {
             return JsonConvert.DeserializeObject<AccelerationAndGyroModel>(s);
-            
         }
     }
 }

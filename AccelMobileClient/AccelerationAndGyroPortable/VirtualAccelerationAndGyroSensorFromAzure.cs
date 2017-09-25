@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccelerationAndGyro
 {
@@ -28,7 +23,7 @@ namespace AccelerationAndGyro
             ListenForData(device);
         }
         
-        async Task ListenForData(string device)
+        async void ListenForData(string device)
         {
             proxy.On<string>("deviceData", deviceDataJson =>
             {
@@ -39,10 +34,9 @@ namespace AccelerationAndGyro
             await proxy.Invoke("ListenDevice", device);
         }
 
-        private AccelerationAndGyroModel createModel(string s)
+        AccelerationAndGyroModel createModel(string s)
         {
             return JsonConvert.DeserializeObject<AccelerationAndGyroModel>(s);
-            
         }
     }
 }
