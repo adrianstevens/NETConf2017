@@ -22,3 +22,6 @@ https://channel9.msdn.com/Events/dotnetConf/2017/T328
 
 ### Edge to Mobile with Azure
 https://channel9.msdn.com/Events/dotnetConf/2017/T329
+
+
+If you want to learn more about C# .NET development with Xamarin and Azure, please visit https://university.xamarin.com. Xamarin University provides free online training and live instructor lead training for Xamarin.Forms, Xamarin.iOS, Xamarin.Android, and Azure. 
