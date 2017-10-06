@@ -1,0 +1,4 @@
+﻿The Xamarin.Forms 3.0 preview of Embedding is published to a custom NuGet feed. To get it:
+Add a new source to your NuGet Manager: https://www.myget.org/F/xamarinforms-dev/api/v3/index.json
+Check Pre-Release
+Select and install the package with the feature name “Embedding” – 3.0.0.100-embeddingpreview
