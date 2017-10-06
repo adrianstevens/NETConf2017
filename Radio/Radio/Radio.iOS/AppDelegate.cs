@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
-using HockeyApp.iOS;
+﻿using Foundation;
 using UIKit;
 
 namespace Radio.iOS
@@ -29,11 +24,6 @@ namespace Radio.iOS
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
-			//Hockey App
-			var manager = BITHockeyManager.SharedHockeyManager;
-			manager.Configure("Your_App_Id");
-			manager.StartManager();
 
             return base.FinishedLaunching(app, options);
         }

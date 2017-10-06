@@ -20,21 +20,21 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MinimumOSVersion</key>
-	<string>6.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.beetroot.squelchpig</string>
+	<string>com.xamarin.radio</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiresFullScreen</key>
 	<true/>
-	<key>CFBundleName</key>
-	<string>Squelch Pig</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleShortVersionString</key>
 	<string>0.2.0</string>
+	<key>CFBundleName</key>
+	<string>Radio</string>
+	<key>MinimumOSVersion</key>
+	<string>7.0</string>
 </dict>
 </plist>
